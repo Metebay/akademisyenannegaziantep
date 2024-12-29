@@ -10,7 +10,6 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: #a8d582; /* Açık yeşil arka plan */
-            overflow: hidden; /* Yalnızca navbar ve banner görünür */
             display: flex;
             flex-direction: column; /* Dikey yönlendirme */
             height: 100vh; /* Tüm yüksekliği kapla */
@@ -40,8 +39,8 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Gölge efekti */
             text-align: center; /* Metin hizalaması */
             flex-shrink: 0; /* Boyut değişimini önler */
-            transition: background-color 0.3s ease; /* Arka plan renginin geçişi için animasyon */
             margin-left: auto; /* Sağda sabitlemek için otomatik margin */
+            transition: background-color 0.3s ease; /* Hover durumu için geçiş */
         }
         .navbar .link-container a {
             text-decoration: none;
