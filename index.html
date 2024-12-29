@@ -66,7 +66,7 @@
         }
         .banner img {
             width: 100%; /* Resim genişliği, banner genişliğine eşit */
-            height: auto; /* Yükseklik otomatik olarak ayarlanır */
+            height: auto; /* Yükseklik otomatik ayarlanır */
             object-fit: cover; /* Resmi alanı kaplaması için ayarla */
             position: absolute; /* Resmi banner'ın arka planı yap */
             top: 0; /* Üstten yapıştır */
@@ -96,10 +96,11 @@
             .banner {
                 height: calc(100vh - 80px); /* Mobilde banner yüksekliği */
                 font-size: 18px; /* Mobilde yazı boyutunu küçült */
+                justify-content: center; /* İçeriği ortala */
             }
             .banner img {
-                width: 100%; /* Mobilde resim genişliği %100 yap */
-                height: auto; /* Yükseklik otomatik ayarlanır */
+                width: 100%; /* Mobilde resim genişliğini %100 yap */
+                height: 100%; /* Yüksekliği %100 yap */
                 object-fit: cover; /* Resmin alanı kaplamasını sağla */
             }
             .footer {
