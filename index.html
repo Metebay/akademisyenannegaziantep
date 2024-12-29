@@ -10,13 +10,12 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: #a8d582; /* Açık yeşil arka plan */
-            overflow: hidden; /* Yalnızca navbar ve banner görünür */
             display: flex;
             flex-direction: column; /* Dikey yönlendirme */
             height: 100vh; /* Tüm yüksekliği kapla */
         }
         .navbar {
-            width: 98%;
+            width: 100%; /* Tam genişlik */
             height: 120px;
             background-color: #ffffff;
             display: flex;
@@ -30,8 +29,9 @@
             z-index: 1000; /* Navbar'ı üstte tut */
         }
         .navbar .logo {
-            height: 150px;
+            height: 100%; /* Logo yüksekliğini tam yap */
             max-width: 200px;
+            object-fit: contain; /* Logo oranlarını koru */
         }
         .navbar .link-container {
             background-color: #6cb943;
@@ -53,7 +53,7 @@
         .banner {
             margin-top: 120px; /* Navbar yüksekliği kadar boşluk bırak */
             width: 100%;
-            height: calc(100vh - 120px - 60px); /* Banner, geri kalan alanı kaplar */
+            height: calc(100vh - 120px); /* Banner, geri kalan alanı kaplar */
             position: relative; /* İçindeki öğeler için konumlandırma */
             overflow: hidden; /* Taşan içerikleri gizle */
             display: flex;
@@ -66,6 +66,7 @@
         }
         .banner img {
             width: 100%; /* Resim genişliği, banner genişliğine eşit */
+            height: auto; /* Yükseklik otomatik olarak ayarlanır */
             object-fit: cover; /* Resmi alanı kaplaması için ayarla */
             position: absolute; /* Resmi banner'ın arka planı yap */
             top: 0; /* Üstten yapıştır */
@@ -90,14 +91,16 @@
                 height: 80px; /* Mobilde navbar yüksekliği ayarla */
             }
             .navbar .logo {
-                height: 80px; /* Mobilde logo yüksekliği ayarla */
+                height: 80%; /* Mobilde logo yüksekliği ayarla */
             }
             .banner {
-                height: calc(100vh - 80px - 60px); /* Mobilde banner yüksekliği */
+                height: calc(100vh - 80px); /* Mobilde banner yüksekliği */
                 font-size: 18px; /* Mobilde yazı boyutunu küçült */
             }
             .banner img {
-                max-width: 100%; /* Mobilde resim genişliğini %100 yap */
+                width: 100%; /* Mobilde resim genişliği %100 yap */
+                height: auto; /* Yükseklik otomatik ayarlanır */
+                object-fit: cover; /* Resmin alanı kaplamasını sağla */
             }
             .footer {
                 padding: 10px; /* Mobilde footer içeriğini küçült */
@@ -121,7 +124,7 @@
     <div class="banner">
         <img src="banner-image.jpg" alt="Banner Resmi" class="desktop-banner"> <!-- Banner için resim ekle -->
         <img src="mobile-banner-image.jpg" alt="Mobil Banner Resmi" class="mobile-banner" style="display: none;"> <!-- Mobil banner için resim ekle -->
-        <div class="text"></div>
+        <div class="text">Banner Metni Burada</div>
     </div>
 
     <!-- Footer -->
