@@ -10,18 +10,19 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: #a8d582; /* Açık yeşil arka plan */
+            overflow: hidden; /* Yalnızca navbar ve banner görünür */
             display: flex;
             flex-direction: column; /* Dikey yönlendirme */
             height: 100vh; /* Tüm yüksekliği kapla */
         }
         .navbar {
-            width: 100%; /* Tam genişlik */
+            width: 100%;
             height: 120px;
             background-color: #ffffff;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
+            align-items: center; /* Dikey hizalama */
+            justify-content: space-between; /* Elemanlar arasında boşluk bırakma */
+            padding: 0 20px; /* Kenar boşlukları */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: fixed; /* Navbar'ın sabit konumda kalması */
             top: 0;
@@ -29,17 +30,18 @@
             z-index: 1000; /* Navbar'ı üstte tut */
         }
         .navbar .logo {
-            height: 100%; /* Logo yüksekliğini tam yap */
+            height: 150px;
             max-width: 200px;
-            object-fit: contain; /* Logo oranlarını koru */
         }
         .navbar .link-container {
-            background-color: #6cb943;
-            border-radius: 30px;
-            padding: 10px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            flex-shrink: 0;
+            background-color: #6cb943; /* Arka plan rengi */
+            border-radius: 5px; /* Kenar yuvarlaklığı */
+            padding: 10px 20px; /* İç boşluk */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+            text-align: center; /* Metin hizalaması */
+            flex-shrink: 0; /* Boyut değişimini önler */
+            transition: background-color 0.3s ease; /* Arka plan renginin geçişi için animasyon */
+            margin-left: auto; /* Sağda sabitlemek için otomatik margin */
         }
         .navbar .link-container a {
             text-decoration: none;
@@ -48,12 +50,12 @@
             font-size: 16px;
         }
         .navbar .link-container:hover {
-            background-color: #558a31;
+            background-color: #558a31; /* Hover durumu için arka plan rengi */
         }
         .banner {
             margin-top: 120px; /* Navbar yüksekliği kadar boşluk bırak */
             width: 100%;
-            height: calc(100vh - 120px); /* Banner, geri kalan alanı kaplar */
+            height: calc(100vh - 120px - 60px); /* Banner, geri kalan alanı kaplar */
             position: relative; /* İçindeki öğeler için konumlandırma */
             overflow: hidden; /* Taşan içerikleri gizle */
             display: flex;
@@ -66,7 +68,6 @@
         }
         .banner img {
             width: 100%; /* Resim genişliği, banner genişliğine eşit */
-            height: auto; /* Yükseklik otomatik ayarlanır */
             object-fit: cover; /* Resmi alanı kaplaması için ayarla */
             position: absolute; /* Resmi banner'ın arka planı yap */
             top: 0; /* Üstten yapıştır */
@@ -88,20 +89,17 @@
         /* Mobil uyumlu stil ayarları */
         @media (max-width: 768px) {
             .navbar {
-                height: 120px; /* Mobilde navbar yüksekliği ayarla */
+                height: 80px; /* Mobilde navbar yüksekliği ayarla */
             }
             .navbar .logo {
-                height: 80%; /* Mobilde logo yüksekliği ayarla */
+                height: 80px; /* Mobilde logo yüksekliği ayarla */
             }
             .banner {
-                height: calc(100vh - 80px); /* Mobilde banner yüksekliği */
+                height: calc(100vh - 80px - 60px); /* Mobilde banner yüksekliği */
                 font-size: 18px; /* Mobilde yazı boyutunu küçült */
-                justify-content: center; /* İçeriği ortala */
             }
             .banner img {
-                width: 100%; /* Mobilde resim genişliğini %100 yap */
-                height: 100%; /* Yüksekliği %100 yap */
-                object-fit: cover; /* Resmin alanı kaplamasını sağla */
+                max-width: 100%; /* Mobilde resim genişliğini %100 yap */
             }
             .footer {
                 padding: 10px; /* Mobilde footer içeriğini küçült */
@@ -125,7 +123,7 @@
     <div class="banner">
         <img src="banner-image.jpg" alt="Banner Resmi" class="desktop-banner"> <!-- Banner için resim ekle -->
         <img src="mobile-banner-image.jpg" alt="Mobil Banner Resmi" class="mobile-banner" style="display: none;"> <!-- Mobil banner için resim ekle -->
-        <div class="text">Banner Metni Burada</div>
+        <div class="text">Banner İçeriği Buraya Gelecek</div> <!-- Banner üzerinde gösterilecek metin -->
     </div>
 
     <!-- Footer -->
