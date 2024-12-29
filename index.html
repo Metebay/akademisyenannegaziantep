@@ -17,21 +17,21 @@
         }
         .navbar {
             width: 100%;
-            height: 120px;
+            height: 120px; /* Masaüstü için navbar yüksekliği */
             background-color: #ffffff;
             display: flex;
             align-items: center; /* Dikey hizalama */
             justify-content: space-between; /* Elemanlar arasında boşluk bırakma */
             padding: 0 20px; /* Kenar boşlukları */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Gölge efekti */
             position: fixed; /* Navbar'ın sabit konumda kalması */
             top: 0;
             left: 0;
             z-index: 1000; /* Navbar'ı üstte tut */
         }
         .navbar .logo {
-            height: 150px;
-            max-width: 200px;
+            height: 100px; /* Logo yüksekliği */
+            max-width: 200px; /* Logo maksimum genişliği */
         }
         .navbar .link-container {
             background-color: #6cb943; /* Arka plan rengi */
@@ -45,9 +45,9 @@
         }
         .navbar .link-container a {
             text-decoration: none;
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 16px;
+            color: #ffffff; /* Yazı rengi */
+            font-weight: bold; /* Kalın yazı */
+            font-size: 16px; /* Yazı boyutu */
         }
         .navbar .link-container:hover {
             background-color: #558a31; /* Hover durumu için arka plan rengi */
@@ -55,19 +55,20 @@
         .banner {
             margin-top: 120px; /* Navbar yüksekliği kadar boşluk bırak */
             width: 100%;
-            height: calc(100vh - 120px - 60px); /* Banner, geri kalan alanı kaplar */
+            height: calc(100vh - 120px); /* Banner, geri kalan alanı kaplar */
             position: relative; /* İçindeki öğeler için konumlandırma */
             overflow: hidden; /* Taşan içerikleri gizle */
             display: flex;
             align-items: center; /* İçerik dikey ortalanır */
             justify-content: center; /* İçerik yatay ortalanır */
             color: #ffffff; /* Beyaz yazı */
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 24px; /* Yazı boyutu */
+            font-weight: bold; /* Kalın yazı */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Yazıya gölge ekler */
         }
         .banner img {
             width: 100%; /* Resim genişliği, banner genişliğine eşit */
+            height: 100%; /* Resim yüksekliği, banner yüksekliğine eşit */
             object-fit: cover; /* Resmi alanı kaplaması için ayarla */
             position: absolute; /* Resmi banner'ın arka planı yap */
             top: 0; /* Üstten yapıştır */
@@ -81,7 +82,7 @@
         .footer {
             background-color: #ffffff; /* Footer rengi */
             color: #7bc939; /* Footer yazı rengi */
-            text-align: center;
+            text-align: center; /* Metin ortala */
             padding: 20px; /* İçerideki boşluk */
             position: relative; /* Diğer öğelerin üstüne gelmemesi için */
             flex-shrink: 0; /* Footer'ın sıkışmasını önler */
@@ -92,14 +93,11 @@
                 height: 80px; /* Mobilde navbar yüksekliği ayarla */
             }
             .navbar .logo {
-                height: 80px; /* Mobilde logo yüksekliği ayarla */
+                height: 60px; /* Mobilde logo yüksekliği ayarla */
             }
             .banner {
-                height: calc(100vh - 80px - 60px); /* Mobilde banner yüksekliği */
+                height: calc(100vh - 80px); /* Mobilde banner yüksekliği */
                 font-size: 18px; /* Mobilde yazı boyutunu küçült */
-            }
-            .banner img {
-                max-width: 100%; /* Mobilde resim genişliğini %100 yap */
             }
             .footer {
                 padding: 10px; /* Mobilde footer içeriğini küçült */
