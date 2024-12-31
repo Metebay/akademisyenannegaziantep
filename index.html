@@ -9,127 +9,121 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #ffffff; /* Açık yeşil arka plan */
+            background-color: #ffffff;
             display: flex;
-            flex-direction: column; /* Dikey yönlendirme */
-            height: 100vh; /* Tüm yüksekliği kapla */
+            flex-direction: column;
+            height: 100vh;
         }
         .navbar {
             width: 95%;
-            height: 120px; /* Masaüstü için navbar yüksekliği */
+            height: 120px;
             background-color: #ffffff;
             display: flex;
-            align-items: center; /* Dikey hizalama */
-            justify-content: space-between; /* Elemanlar arasında boşluk bırakma */
-            padding: 0 20px; /* Kenar boşlukları */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Gölge efekti */
-            position: fixed; /* Navbar'ın sabit konumda kalması */
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
             top: 0;
             left: 0;
-            z-index: 1000; /* Navbar'ı üstte tut */
+            z-index: 1000;
         }
         .navbar .logo {
-            height: 100px; /* Logo yüksekliği */
-            max-width: 200px; /* Logo maksimum genişliği */
+            height: 100px;
+            max-width: 200px;
         }
         .navbar .link-container {
-            background-color: #6cb943; /* Arka plan rengi */
-            border-radius: 5px; /* Kenar yuvarlaklığı */
-            padding: 10px 20px; /* İç boşluk */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Gölge efekti */
-            text-align: center; /* Metin hizalaması */
-            flex-shrink: 0; /* Boyut değişimini önler */
-            margin-left: auto; /* Sağda sabitlemek için otomatik margin */
-            transition: background-color 0.3s ease; /* Hover durumu için geçiş */
+            display: flex;
+            gap: 15px;
         }
-        .navbar .link-container a {
+        .navbar .link-container .link {
+            background-color: #6cb943;
+            border-radius: 5px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex-shrink: 0;
             text-decoration: none;
-            color: #ffffff; /* Yazı rengi */
-            font-weight: bold; /* Kalın yazı */
-            font-size: 16px; /* Yazı boyutu */
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
-        .navbar .link-container:hover {
-            background-color: #558a31; /* Hover durumu için arka plan rengi */
+        .navbar .link-container .link:hover {
+            background-color: #558a31;
         }
         .banner {
-            margin-top: 120px; /* Navbar yüksekliği kadar boşluk bırak */
+            margin-top: 120px;
             width: 100%;
-            height: calc(100vh - 120px); /* Banner, geri kalan alanı kaplar */
-            position: relative; /* İçindeki öğeler için konumlandırma */
-            overflow: hidden; /* Taşan içerikleri gizle */
+            height: calc(100vh - 120px);
+            position: relative;
+            overflow: hidden;
             display: flex;
-            align-items: center; /* İçerik dikey ortalanır */
-            justify-content: center; /* İçerik yatay ortalanır */
-            color: #ffffff; /* Beyaz yazı */
-            font-size: 24px; /* Yazı boyutu */
-            font-weight: bold; /* Kalın yazı */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Yazıya gölge ekler */
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         .banner img {
-            width: 100%; /* Resim genişliği, banner genişliğine eşit */
-            height: 100%; /* Resim yüksekliği, banner yüksekliğine eşit */
-            object-fit: cover; /* Resmi alanı kaplaması için ayarla */
-            position: absolute; /* Resmi banner'ın arka planı yap */
-            top: 0; /* Üstten yapıştır */
-            left: 0; /* Soldan yapıştır */
-            z-index: 0; /* Resmi arka plana yerleştir */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
         }
         .banner .text {
-            position: relative; /* Yazıyı resmin üstüne yerleştir */
-            z-index: 1; /* Yazıyı üstte göster */
+            position: relative;
+            z-index: 1;
         }
         .footer {
-            background-color: #ffffff; /* Footer rengi */
-            color: #7bc939; /* Footer yazı rengi */
-            text-align: center; /* Metin ortala */
-            padding: 20px; /* İçerideki boşluk */
-            position: relative; /* Diğer öğelerin üstüne gelmemesi için */
-            flex-shrink: 0; /* Footer'ın sıkışmasını önler */
+            background-color: #ffffff;
+            color: #7bc939;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            flex-shrink: 0;
         }
-        /* Mobil uyumlu stil ayarları */
         @media (max-width: 768px) {
             .navbar {
-                height: 120px; /* Mobilde navbar yüksekliği ayarla */
+                height: 120px;
             }
             .navbar .logo {
-                height: 60px; /* Mobilde logo yüksekliği ayarla */
+                height: 60px;
             }
             .banner {
-                height: calc(100vh - 80px); /* Mobilde banner yüksekliği */
-                font-size: 18px; /* Mobilde yazı boyutunu küçült */
+                height: calc(100vh - 80px);
+                font-size: 18px;
             }
             .footer {
-                padding: 10px; /* Mobilde footer içeriğini küçült */
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Üstteki çubuk -->
     <div class="navbar">
-        <!-- Sol tarafta logo -->
         <img src="Adsız tasarım (17).png" alt="Logo" class="logo">
-        
-        <!-- Sağ tarafta bağlantı kutucuğu -->
         <div class="link-container">
-            <a href="https://forms.gle/Yuy24pqESYBHYjir5" target="_blank">Ön Kayıt Formu</a> <!-- Yeni sekmede açılması için target="_blank" eklendi -->
+            <a href="https://forms.gle/Yuy24pqESYBHYjir5" target="_blank" class="link">Ön Kayıt Formu</a>
+            <a href="gallery.html" class="link">Galeri</a>
         </div>
     </div>
 
-    <!-- Navbarın altındaki banner -->
     <div class="banner">
-        <img src="banner-image.jpg" alt="Banner Resmi" class="desktop-banner"> <!-- Banner için resim ekle -->
-        <img src="mobile-banner-image.jpg" alt="Mobil Banner Resmi" class="mobile-banner" style="display: none;"> <!-- Mobil banner için resim ekle -->
-        <div class="text"></div> <!-- Banner üzerinde gösterilecek metin -->
+        <img src="banner-image.jpg" alt="Banner Resmi" class="desktop-banner">
+        <img src="mobile-banner-image.jpg" alt="Mobil Banner Resmi" class="mobile-banner" style="display: none;">
+        <div class="text"></div>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
         &copy; 2024 Tüm Hakları Saklıdır.
     </div>
 
     <script>
-        // Mobil banner'ı göster
         function updateBanner() {
             const mobileBanner = document.querySelector('.mobile-banner');
             const desktopBanner = document.querySelector('.desktop-banner');
@@ -143,7 +137,6 @@
             }
         }
 
-        // Sayfa yüklendiğinde ve pencere boyutu değiştiğinde banner'ı güncelle
         window.addEventListener('load', updateBanner);
         window.addEventListener('resize', updateBanner);
     </script>
